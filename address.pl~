@@ -1,0 +1,24 @@
+use strict;
+use warnings;
+use utf8;
+
+use constant STATION_DATA =>
+{
+    'aiueo' => {
+         'aaa' => 'suesue',
+         'bbb' => 'moznion'
+    }
+};
+
+sub get_station_to_pref{
+  return STATION_DATA;
+}
+
+my $data = 'aiueo';
+
+use Data::Dumper;
+
+my %data;
+%data = get_station_to_pref()->{$data};
+
+print Dumper %data;
