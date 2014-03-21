@@ -1,0 +1,18 @@
+use WWW::Mechanize;
+use utf8;
+
+my $agent = WWW::Mechanize->new;
+$agent->get('http://mixi.jp/');
+
+$agent->submit_form(
+   with_fields => {
+     email =>'suehirosuehirosuehiro@yahoo.co.jp',
+     password =>'hirokih',
+   },
+};
+
+$agent->get('http://mixi.jp/show_friend.pl?id=27880606');
+
+my ($status) = $agent->content =~ /最終ログインは(.+)/;
+
+print $status;
