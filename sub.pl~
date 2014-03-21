@@ -1,0 +1,6 @@
+use strict;
+use warnings;
+
+my $greeting = sub {print "hello,world!\n"};
+print $greeting->();
+

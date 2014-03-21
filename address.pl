@@ -30,11 +30,13 @@ sub get_station_to_pref{
   return STATION_DATA;
 }
 
-my $data = 'aiueo';
+my $data = '三重県';
 
 use Data::Dumper;
 
 my %data;
 %data = get_station_to_pref()->{$data};
 
-print Dumper %data;
+my @keys = keys %data;
+
+print @keys,"\n";
