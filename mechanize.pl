@@ -9,23 +9,22 @@ $agent->get('http://mixi.jp/');
 
 $agent->submit_form(
    with_fields => {
-     email =>'suehirosuehirosuehiro@yahoo.co.jp',
-     password =>'hirokih',
+     email =>'__MYEMAIL__',
+     password =>'__MYPASS__',
    },
 );
 
-$agent->get('http://mixi.jp/show_friend.pl?id=27880606');
-use Data::Dumper;
+my %my_friends = (
+ "岡部典孝" => 27880606,
+);
 
-#print Dumper $agent->content;
+$agent->get('http://mixi.jp/show_friend.pl?id=27880606');
 
 my ($status) = $agent->content =~ /最終ログインは(.+)/;
+my($first_name,$last_name) = $agent->content =~ /(\w+)\s+(\w+)さん/;
 
-
-
-if($status =~ m!<a\s+href="javascript:void(0);"\s+class="JS_popupLinkUnder3Days">(.*?)</a>)</span>!xms){
-  my $number = $1;
-  print Encode::encode_utf8($number);
+if($status =~ m!<a href="javascript:void(?:.*?);" class="JS_popupLinkUnder3Days">(.*?)</a>(?:.*?)</span>!g){
+ print Encode::encode_utf8($first_name),Encode::encode_utf8($last_name),Encode::encode_utf8("さんの最終ログイン時間は"), Encode::encode_utf8($1),"\n";
 }
 
 
