@@ -1,0 +1,6 @@
+use strict;
+use warnings;
+
+@json_files = glob("json.pl");
+
+print "@json_files","\n";

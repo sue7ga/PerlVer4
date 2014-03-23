@@ -1,0 +1,23 @@
+use WWW::Mechanize;
+use strict;
+use warnings;
+use utf8;
+use Encode;
+
+my $agent = WWW::Mechanize->new;
+$agent->get('http://mixi.jp/');
+
+$agent->submit_form(
+   with_fields => {
+     email =>'suehirosuehirosuehiro@yahoo.co.jp',
+     password =>'hirokih',
+   },
+);
+
+$agent->get('http://mixi.jp/show_friend.pl?id=27880606');
+
+use Data::Dumper;
+
+print Dumper $agent;
+
+open($agent,">>data.txt") or die("error: $!");

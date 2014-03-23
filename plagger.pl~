@@ -1,0 +1,11 @@
+use strict;
+use warnings;
+
+
+my %p;
+
+@p{qw(second minute hour day month year zone)} = qw/1 2 3 4 5 6 7/;
+
+foreach my $key(keys %p){
+ print $key,"\n";
+}
