@@ -9,8 +9,8 @@ $agent->get('http://mixi.jp/');
 
 $agent->submit_form(
    with_fields => {
-     email =>'__MYEMAIL__',
-     password =>'__MYPASS__',
+     email =>'suehirosuehirosuehiro@yahoo.co.jp',
+     password =>'hirokih',
    },
 );
 

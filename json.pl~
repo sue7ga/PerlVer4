@@ -1,0 +1,18 @@
+use strict;
+use warnings;
+
+use JSON;
+
+my $json_text = do{
+ no utf8;
+ '{"name": "スライム"
+   "hp":8,"exp":4,"rare":false,
+   "drop":["やくそう"]
+   }';
+};
+
+my $data = decode_json($json_text);
+
+use Data::Dumper;
+
+print Dumper $data;

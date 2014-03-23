@@ -1,0 +1,6 @@
+use strict;
+use warnings;
+
+use XML::Simple;
+
+my $data = XMLin('http://www.ekidata.jp/api/l/300015.xml');
