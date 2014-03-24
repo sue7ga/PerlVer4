@@ -18,7 +18,7 @@ my %my_friends = (
  "岡部典孝" => 27880606,
 );
 
-$agent->get('http://mixi.jp/show_friend.pl?id=27880606');
+$agent->get('http://mixi.jp/show_friend.pl?id=2788060o6');
 
 my ($status) = $agent->content =~ /最終ログインは(.+)/;
 my($first_name,$last_name) = $agent->content =~ /(\w+)\s+(\w+)さん/;

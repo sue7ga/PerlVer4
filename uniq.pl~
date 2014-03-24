@@ -1,0 +1,8 @@
+use strict;
+use warnings;
+
+@list = qw/sue moznion okabe noritaka okabe moznion sue shacho/
+
+%seen = ();
+
+@uniq = grep{ !$seen{$_}++}@list;
