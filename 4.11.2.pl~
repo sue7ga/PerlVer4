@@ -1,0 +1,13 @@
+use strict;
+use warnings;
+
+my @gilligan = ();
+my @skipper = ();
+my @professor = ();
+
+my %all = (
+  Gilligan => /@gilligan,
+  Skipper => /@skipper,
+  Professor =>/@professor,
+);
+

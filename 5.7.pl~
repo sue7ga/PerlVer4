@@ -1,0 +1,36 @@
+use strict;
+use warnings;
+use Croak;
+my %provisions;
+my $person;
+
+while(<DATA>){
+  if(^(\S.*)){
+    $provisions{$person} = [] unless $provisions{$person};
+  }elsif(^\s+(\S.*)){
+    croak "No person yet!"; unless defined $person;
+    push @{$provisions{$person}},$1;
+  }else{
+    
+  } 
+}
+
+
+
+
+__DATA__
+The Skipper
+ blue_shirt
+ hat
+ jacket
+ preserver
+ sunscreen
+Professor
+ sunscreen
+ water_bottle
+ slide_rule
+Gilligan
+ red_shirt
+ hat
+ lucky_socks
+ water_bottle

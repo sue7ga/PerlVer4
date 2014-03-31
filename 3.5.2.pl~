@@ -1,0 +1,14 @@
+use strict;
+use warnings;
+
+while(1){
+ 
+ print "please regrep pattern","\n";
+
+ chomp($regrep = <STDIN>);
+  
+  print map{"$_"}
+  grep{ eval{/$regrep/}}
+  glob(".* *"); 
+
+}

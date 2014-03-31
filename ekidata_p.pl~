@@ -1,0 +1,10 @@
+use strict;
+use warnings;
+use JSON;
+use utf8;
+use LWP::UserAgent;
+use Encode;
+use Data::Dumper;
+
+my $ua = LWP::UserAgent->new;
+my $res = $ua->get('http://www.ekidata.jp/api/p/20.json');
