@@ -1,0 +1,10 @@
+use strict;
+use warnings;
+
+use DBI;
+
+my $dns = "DBI:mysql:database=suenaga;host=localhost;port=3000";
+
+my $dbh =DBI->connect($dsn,'suenaga','hirokihH5',{'RaiseError'=>1});
+
+print Dumper $dbh;

@@ -26,3 +26,4 @@ $status =~ s/<\/a>//;
 $status =~ s/\）//;
 
 print Encode::encode_utf8($status);
+

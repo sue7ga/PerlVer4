@@ -1,0 +1,4 @@
+use strict;
+use LWP::UserAgent;
+
+my $uri = URI->new('http://gihyo.jp/');

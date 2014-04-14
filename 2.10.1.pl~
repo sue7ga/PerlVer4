@@ -1,0 +1,9 @@
+use strict;
+use warnings;
+
+my @day = qw(ark dip wap sen pop sep kir);
+
+sub number_to_day_name{
+ my $num = shift if @_;
+ 
+}

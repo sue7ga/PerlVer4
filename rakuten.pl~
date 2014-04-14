@@ -1,0 +1,12 @@
+use strict;
+use WWW::Mechanize;
+use warnings;
+use utf8;
+use Encode;
+
+my $agent = WWW::Mechanize->new;
+
+$agent->get('http://delivery.rakuten.co.jp/');
+
+use Data::Dumper;
+print Dumper $agent;
