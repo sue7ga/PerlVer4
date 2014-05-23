@@ -1,0 +1,11 @@
+use strict;
+use warnings;
+use utf8;
+
+use IO::File;
+use XML::TreePP;
+use Data::Dumper;
+
+
+my $xml_parser = XML::TreePP->new();
+my $xml = $xml_parser->parsefil('sample.xml')

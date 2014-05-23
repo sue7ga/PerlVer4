@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addressBook>
+<person>
+ <name>山田太郎</name>
+ <email>taro.yamada@xxx.com</email>
+ <address>東京</address>
+</person>
+<person>
+ <name>田中次郎</name>
+ <email>jiro.tanaka@xxx.com</email>
+ <address>大阪</address>
+</person>
+</addressBook>
